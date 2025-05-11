@@ -1,0 +1,61 @@
+test_amazon_search: Failed: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100ddc3bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100dd4684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100911fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001009591bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010099a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010094d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000100da07e0 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000100da3ab0 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000100d81db4 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000100da4328 cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000100d73640 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000100dc428c cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000100dc4418 cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000100dd42d0 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000186885c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000186880b80 thread_start + 8
+
+test_amazon_search: Failed: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001025d03bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001025c8684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102105fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010214d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010218e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021413f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025947e0 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000102597ab0 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000102575db4 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000102598328 cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000102567640 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001025b828c cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001025b8418 cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001025c82d0 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000186885c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000186880b80 thread_start + 8
+
+test_amazon_search: Failed: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001048dc3bc cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001048d4684 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104411fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001044591bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010449a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010444d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001048a07e0 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001048a3ab0 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104881db4 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001048a4328 cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104873640 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001048c428c cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001048c4418 cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001048d42d0 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000186885c0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000186880b80 thread_start + 8
+
+test_amazon_search: Passed
+test_flipkart_cart: Passed
+test_flipkart_cart: Failed: Add to cart button not found.
+test_flipkart_cart: Passed
