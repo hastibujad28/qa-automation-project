@@ -13,9 +13,9 @@ screenshot_folder = "path_to_screenshot_folder"
 if not os.path.exists(screenshot_folder):
     os.makedirs(screenshot_folder)
 
-# WebDriver setup
+# Using WebDriver Manager to install ChromeDriver with chrome options
 options = Options()
-options.headless = False  # Set this to True if you want the browser to be headless
+options.headless = False 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 # Function to take a screenshot

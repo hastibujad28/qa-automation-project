@@ -14,10 +14,10 @@ os.makedirs(screenshot_dir, exist_ok=True)
 # Log file path
 log_file = "test_results.txt"
 
-# Use WebDriver Manager to install and use the correct version of ChromeDriver
+# Using WebDriver Manager to install ChromeDriver
 service = Service(ChromeDriverManager().install())
 
-# Initialize the Chrome driver with the Service object
+# Initializing the Chrome driver with the Service object
 driver = webdriver.Chrome(service=service)
 
 # Function to capture screenshots on failure
