@@ -1,18 +1,8 @@
 # Byte-compiled / cache files
 __pycache__/
-*.py[cod]
 
-# Logs and screenshots (if you want to keep them local only)
-logs/
-screenshots/
+# Screenshots
+testcases/screenshots
 
-# Environment files
-.env
-*.env
-
-# Driver executables
-chromedriver
-geckodriver
-
-# VSCode settings (if any)
+# VSCode 
 .vscode/
