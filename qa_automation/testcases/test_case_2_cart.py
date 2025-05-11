@@ -46,18 +46,18 @@ def test_flipkart_cart():
         except:
             print("ℹ️ Login popup did not appear")
 
-        # Search for product
+    
         search_box = wait.until(EC.presence_of_element_located((By.NAME, "q")))
         search_box.send_keys("Samsung Galaxy")
         search_box.submit()
         print("✅ Searched for Samsung Galaxy")
 
-        # Scroll to force lazy loading
+      
         time.sleep(2)
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
-        # Wait for any product card to appear
+
         try:
             product = wait.until(
                 EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/p/')]"))
@@ -70,10 +70,10 @@ def test_flipkart_cart():
             log_test_result(test_name, "Failed: Products did not load in time.")
             return
 
-        # Switch to new tab
+    
         driver.switch_to.window(driver.window_handles[-1])
 
-        # Wait for Add to Cart button
+     
         try:
             add_to_cart = wait.until(
                 EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Add to cart')]"))
