@@ -14,6 +14,10 @@ os.makedirs(screenshot_dir, exist_ok=True)
 # Log file path
 log_file = "test_results.txt"
 
+options = webdriver.ChromeOptions()
+options.add_argument("--start-maximized")
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
 # Function to capture screenshots
 def capture_screenshot(driver, test_name, status):
     timestamp = time.strftime("%Y%m%d-%H%M%S")
@@ -28,9 +32,6 @@ def log_test_result(test_name, result):
     print(f"Test result logged: {test_name} - {result}")
 
 def test_flipkart_cart():
-    options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     wait = WebDriverWait(driver, 30)
     test_name = "test_flipkart_cart"
     
