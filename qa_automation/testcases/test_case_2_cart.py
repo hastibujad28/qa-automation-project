@@ -36,58 +36,45 @@ def test_flipkart_cart():
     
     try:
         driver.get("https://www.flipkart.com")
-        print("✅ Opened Flipkart")
-
-        # Close login popup
-        try:
-            close_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'✕')]")))
-            close_btn.click()
-            print("✅ Closed login popup")
-        except:
-            print("ℹ️ Login popup did not appear")
-
+        print("Opened Flipkart")
     
         search_box = wait.until(EC.presence_of_element_located((By.NAME, "q")))
         search_box.send_keys("Samsung Galaxy")
         search_box.submit()
-        print("✅ Searched for Samsung Galaxy")
-
+        print("Searched for Samsung Galaxy")
       
         time.sleep(2)
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
-
 
         try:
             product = wait.until(
                 EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/p/')]"))
             )
             product.click()
-            print("✅ Clicked on a product")
+            print("Clicked on a product")
         except:
-            print("❌ Products did not load in time.")
+            print("Products did not load in time.")
             capture_screenshot(driver, test_name, "failed")
             log_test_result(test_name, "Failed: Products did not load in time.")
             return
-
     
         driver.switch_to.window(driver.window_handles[-1])
 
-     
         try:
             add_to_cart = wait.until(
                 EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Add to cart')]"))
             )
             add_to_cart.click()
-            print("✅ Flipkart Cart Test Passed")
+            print("Flipkart Cart Test Passed")
             capture_screenshot(driver, test_name, "passed")
             log_test_result(test_name, "Passed")
         except:
-            print("❌ Add to cart button not found.")
+            print("Add to cart button not found.")
             capture_screenshot(driver, test_name, "failed")
             log_test_result(test_name, "Failed: Add to cart button not found.")
     except Exception as e:
-        print(f"❌ Test failed: {e}")
+        print(f"Test failed: {e}")
         capture_screenshot(driver, test_name, "failed")
         log_test_result(test_name, f"Failed: {str(e)}")
     finally:
