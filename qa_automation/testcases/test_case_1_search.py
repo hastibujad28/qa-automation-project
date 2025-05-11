@@ -14,10 +14,10 @@ os.makedirs(screenshot_dir, exist_ok=True)
 # Log file path
 log_file = "test_results.txt"
 
-# Use WebDriver Manager to install and use the correct version of ChromeDriver
+# Using WebDriver Manager to install and use the correct version of ChromeDriver
 service = Service(ChromeDriverManager().install())
 
-# Initialize the Chrome driver with the Service object
+# Initializing the Chrome driver with the Service object
 driver = webdriver.Chrome(service=service)
 
 # Function to capture screenshots on failure
@@ -43,11 +43,9 @@ def test_amazon_search():
             EC.presence_of_element_located((By.ID, "twotabsearchtextbox"))
         )
         
-        # Search for a product
         search_box.send_keys("laptop")
         search_box.submit()
 
-        # Validate results
         assert "laptop" in driver.title
         print("Amazon Search Test Passed")
         log_test_result("test_amazon_search", "Passed")
@@ -55,9 +53,5 @@ def test_amazon_search():
         capture_screenshot(driver, "test_amazon_search")
         log_test_result("test_amazon_search", f"Failed: {str(e)}")
         print(f"Test failed: {str(e)}")
-
-# Run the test
 test_amazon_search()
-
-# Quit the driver
 driver.quit()
